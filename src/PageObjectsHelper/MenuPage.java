@@ -1,4 +1,4 @@
-package PageObjectsHelper;
+package pageobjectshelper;
 
 import java.time.Duration;
 
@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import Utils.General;
+import utils.General;
 
 public class MenuPage {
 	WebDriver driver;
