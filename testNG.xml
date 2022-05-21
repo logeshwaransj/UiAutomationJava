@@ -2,7 +2,7 @@
 <suite name=" My First Suite" verbose="1" > 
 <test name="First Test" > 
 <classes> 
-      <class name="Tests.FilterProductTest" /> 
+      <class name="tests.FilterProductTest" /> 
 </classes> 
 </test> 
 </suite>
