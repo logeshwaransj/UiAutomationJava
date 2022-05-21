@@ -5,11 +5,11 @@ public class Constants {
 	public static String appURL = "https://www.amazon.in/";
 	public static String browserType = "Chrome";
 	
-	public static String chromeDriverPath = "C:\\\\Jars\\chromedriver.exe";
+	public static String chromeDriverPath = "D:\\Logesh\\Java\\Jars\\chromedriver.exe";
 	
 	//for platform independent test run
-	public static boolean headLessMode = True;
+	public static boolean headLessMode = true;
 	
 	//for running test on Selenium RemoteDriver (Grid)
-	public static boolean remoteDriver = False;
+	public static boolean remoteDriver = false;
 }
