@@ -1,4 +1,4 @@
-package Tests;
+package tests;
 
 import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
@@ -10,9 +10,9 @@ import org.testng.annotations.BeforeTest;
 
 import com.relevantcodes.extentreports.ExtentReports;
 
-import Utils.DriverManager;
-import Utils.Report; 
-import Constants.Constants;
+import utils.DriverManager;
+import utils.Report; 
+import constants.Constants;
 
 public class TestBase {
     static String URL;

@@ -1,4 +1,4 @@
-package Tests;
+package tests;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
@@ -7,10 +7,10 @@ import org.testng.annotations.Test;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-import PageObjectsHelper.MenuPage;
-import PageObjectsHelper.ProductPage;
-import Utils.General;
-import Utils.Screenshot;
+import pageobjectshelper.MenuPage;
+import pageobjectshelper.ProductPage;
+import utils.General;
+import utils.Screenshot;
 import dev.failsafe.internal.util.Assert;
 
 public class FilterProductTest extends TestBase   {
