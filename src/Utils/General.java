@@ -13,7 +13,6 @@ public class General {
 		//scroll to element
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView();", element);
-	
 	}
 	
 	public static void CheckWindowsCount(String s, WebDriver driver)
@@ -30,7 +29,8 @@ public class General {
 	public static void SwitchWindow(String originalWindow, WebDriver driver)
 	{
 		// iterate each window
-        for (String windowHandle : driver.getWindowHandles()) {
+        for (String windowHandle : driver.getWindowHandles())  
+		{
          if(!originalWindow.contentEquals(windowHandle)) 
          {
                 driver.switchTo().window(windowHandle);
@@ -40,29 +40,36 @@ public class General {
         }
 	}
 	
-	public static boolean WaitDOMToLoad(WebDriver driver) {
+	public static boolean WaitDOMToLoad(WebDriver driver) 
+	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(5));
 	    
 		//wait for JS to load
-	    ExpectedCondition<Boolean> jsLoad = new ExpectedCondition<Boolean>() {
-	        public Boolean apply(WebDriver driver) {
+	    ExpectedCondition<Boolean> jsLoad = new ExpectedCondition<Boolean>() 
+		  {
+	        public Boolean apply(WebDriver driver) 
+			{
 	          return js.executeScript("return document.readyState")
 	              .toString().equals("complete");
 	        }
 	      };
 	      
-	   // wait for jQuery to load
-	      ExpectedCondition<Boolean> jQueryLoad = new ExpectedCondition<Boolean>() {
-	        public Boolean apply(WebDriver driver) {
-			      try {
-			        return ((Long)js.executeScript("return jQuery.active") == 0);
-			      }
-			      catch (Exception e) {
-			        return true;
-			      }
+	    // wait for jQuery to load
+	    ExpectedCondition<Boolean> jQueryLoad = new ExpectedCondition<Boolean>() 
+		   {
+				public Boolean apply(WebDriver driver) 
+				{
+				  try 
+				  {
+					return ((Long)js.executeScript("return jQuery.active") == 0);
+				  }
+				  catch (Exception e) 
+				  {
+					return true;
+				  }
 		        }
-		      };
+			};
 		   return wait.until(jQueryLoad) && wait.until(jsLoad);
 	}
 }

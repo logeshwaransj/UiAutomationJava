@@ -10,7 +10,8 @@ public class Report {
 	public static ExtentReports GetExtent()
 	{
 		File dir = new File("C://Reports");
-		if (!dir.exists()){
+		if (!dir.exists())
+		{
 			dir.mkdirs();
 		}
 		
