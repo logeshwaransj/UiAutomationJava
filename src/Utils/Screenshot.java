@@ -11,11 +11,9 @@ import com.google.common.io.Files;
 
 public class Screenshot {
 
-public static String TakeScreenShot(WebDriver driver) throws IOException
-	{	
+	public static String TakeScreenShot(WebDriver driver) throws IOException {
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		File Dest = new File("src/screenshots/" + System.currentTimeMillis()
-		+ ".png");
+		File Dest = new File("src/screenshots/" + System.currentTimeMillis() + ".png");
 		String errflpath = Dest.getAbsolutePath();
 		Files.copy(scrFile, Dest);
 		return errflpath;
